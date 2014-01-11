@@ -1,0 +1,339 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta31.dtd" >
+   <PATCH nodename="D:\backup\progik\vvvv\Patches\Kinect plugins\Glow.v4p" filename="D:\backup\progik\vvvv\Patches\Kinect plugins\Glow.v4p" systemname="Glow">
+   <BOUNDS height="6000" left="7350" top="945" type="Window" width="9000">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="10" nodename="Transform (Transform 2d)" systemname="Transform (Transform 2d)">
+   <BOUNDS height="100" left="300" top="2160" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" values="2.57">
+   </PIN>
+   <PIN pinname="ScaleY" slicecount="1" values="2.57">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="0.28">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="-0.28">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="9" nodename="Quad (DX9)" systemname="Quad (DX9)">
+   <BOUNDS height="100" left="1320" top="2955" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="8" nodename="Group (EX9)" systemname="Group (EX9)">
+   <BOUNDS height="100" left="2160" top="3690" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="6" nodename="Quad (DX9)" systemname="Quad (DX9)">
+   <BOUNDS height="100" left="2745" top="2910" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="8" dstpinname="Layer 1" srcnodeid="6" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" id="4" nodename="HSV (Color Join)" systemname="HSV (Color Join)">
+   <BOUNDS height="100" left="4515" top="2430" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Hue" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Saturation" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Value" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Alpha" slicecount="1" visible="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Blur\Blur (EX9.Texture Filter).v4p" id="3" nodename="Blur (EX9.Texture Filter)" systemname="Blur (EX9.Texture Filter)">
+   <BOUNDS height="100" left="2070" top="1890" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" visible="1" values="0.42">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="| Clamp|">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Window" left="8385" top="1620" width="11160" height="9900">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="6" dstpinname="Transform" srcnodeid="10" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="9" dstpinname="Transform" srcnodeid="10" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\SplitJoin\SetAlpha\SetAlpha (EX9.Texture Join).v4p" hiddenwhenlocked="0" id="1" managers="" nodename="SetAlpha (EX9.Texture Join)" systemname="SetAlpha (EX9.Texture Join)">
+   <PIN pinname="Input" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Alpha" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS height="100" left="3060" top="2310" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Mode" pintype="Input" slicecount="1" visible="1" values="| Lightness|">
+   </PIN>
+   <PIN pinname="Invert" pintype="Input" slicecount="1" visible="1" values="0">
+   </PIN>
+   <BOUNDS height="3600" left="0" top="0" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="8550" left="-7440" top="2700" type="Window" width="9000">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Composite With Original" pintype="Input" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Patch" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="6" dstpinname="Texture" srcnodeid="1" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="12" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="735" top="855" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="735" top="855" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Texture">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Input" srcnodeid="12" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="InABox" id="13" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="1770" top="4155" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1770" top="4155" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="13" dstpinname="Input Node" srcnodeid="8" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="InABox" id="14" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="1725" top="315" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1725" top="315" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="FrontTexture">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="15" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="4980" top="60" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="4980" top="60" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="BackgroundTexture">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1" dstpinname="Input" srcnodeid="15" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="Hidden" id="19" nodename="Quad (DX9)" systemname="Quad (DX9)">
+   <BOUNDS height="100" left="5910" top="2760" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Texture" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Blur\Blur (EX9.Texture Filter).v4p" id="18" nodename="Blur (EX9.Texture Filter)" systemname="Blur (EX9.Texture Filter)">
+   <BOUNDS height="100" left="6420" top="1695" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="0.72">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="| Clamp|">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Window" left="8385" top="1620" width="11160" height="9900">
+   </BOUNDS>
+   </NODE>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\SplitJoin\SetAlpha\SetAlpha (EX9.Texture Join).v4p" hiddenwhenlocked="0" id="17" managers="" nodename="SetAlpha (EX9.Texture Join)" systemname="SetAlpha (EX9.Texture Join)">
+   <PIN pinname="Input" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Alpha" pintype="Input" visible="1">
+   </PIN>
+   <BOUNDS height="100" left="6225" top="2160" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Mode" pintype="Input" slicecount="1" visible="1" values="| Lightness|">
+   </PIN>
+   <PIN pinname="Invert" pintype="Input" slicecount="1" visible="1" values="0">
+   </PIN>
+   <BOUNDS height="3600" left="3165" top="0" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="8550" left="-10095" top="2625" type="Window" width="9000">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Composite With Original" pintype="Input" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Patch" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="19" dstpinname="Texture" srcnodeid="17" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="17" dstpinname="Alpha" srcnodeid="18" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="18" dstpinname="Input" srcnodeid="12" srcpinname="Output Node">
+   <LINKPOINT x="6180" y="1275">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="17" dstpinname="Input" srcnodeid="15" srcpinname="Output Node">
+   <LINKPOINT x="6682" y="1215">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="19" dstpinname="Color" srcnodeid="4" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="8" dstpinname="Layer 3" srcnodeid="9" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="19" dstpinname="Transform" srcnodeid="10" srcpinname="Transform Out">
+   <LINKPOINT x="315" y="2805">
+   </LINKPOINT>
+   <LINKPOINT x="135" y="2625">
+   </LINKPOINT>
+   <LINKPOINT x="105" y="1770">
+   </LINKPOINT>
+   <LINKPOINT x="5025" y="1485">
+   </LINKPOINT>
+   <LINKPOINT x="5715" y="1605">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="8" dstpinname="Layer 2" srcnodeid="19" srcpinname="Layer">
+   <LINKPOINT x="5725" y="3360">
+   </LINKPOINT>
+   <LINKPOINT x="2705" y="3465">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\SplitJoin\SetAlpha\SetAlpha (EX9.Texture Join).v4p" hiddenwhenlocked="0" id="0" managers="" nodename="SetAlpha (EX9.Texture Join)" systemname="SetAlpha (EX9.Texture Join)">
+   <PIN pinname="Alpha" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input" pintype="Input" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Mode" pintype="Input" slicecount="1" visible="1" values="| Lightness|">
+   </PIN>
+   <PIN pinname="Output" pintype="Output" visible="1">
+   </PIN>
+   <BOUNDS height="100" left="1860" top="2325" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="3600" left="0" top="0" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="8550" left="7530" top="1275" type="Window" width="9000">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Invert" pintype="Input" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Composite With Original" pintype="Input" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Patch" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="0" dstpinname="Input" srcnodeid="14" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="Alpha" srcnodeid="3" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="9" dstpinname="Texture" srcnodeid="0" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="9" dstpinname="Color" srcnodeid="4" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="20" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="4740" top="3480" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="4740" top="3480" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="enable">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="8" dstpinname="Enabled" srcnodeid="20" srcpinname="Y Output Value">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="6" dstpinname="Color">
+   </LINK>
+   <NODE componentmode="InAWindow" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Blur\Blur (EX9.Texture Filter).v4p" id="21" nodename="Blur (EX9.Texture Filter)" systemname="Blur (EX9.Texture Filter)">
+   <BOUNDS height="100" left="3615" top="1860" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" visible="1" values="0.42">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="| Clamp|">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Window" left="8385" top="1620" width="11160" height="9900">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="1" dstpinname="Alpha">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Output Node" dstnodeid="21" dstpinname="Input">
+   </LINK>
+   </PATCH>
